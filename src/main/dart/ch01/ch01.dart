@@ -22,5 +22,9 @@ main() {
   var p2 = new SolarexPoint(10, 16);
   print(p1.scale(2).y);
   print(p1 + p2);
+  print(p1.hashCode);
+  print(p1 == p2);
+  print(p1.runtimeType);
+  print(p1.runtimeType.runtimeType);
   print(SolarexPoint.distance(p1, p2));
 }
