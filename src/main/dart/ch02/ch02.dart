@@ -28,6 +28,14 @@ main() {
   print(d.runtimeType);
 //  print(Null.runtimeType);
   print(e.runtimeType.runtimeType);
+
+  var f = TestPoint3D(1, 2, 3);
+  var g = (Type);
+  var h = Type;
+  print(g);
+  print(h);
+  print(g.runtimeType);
+  print(h.runtimeType);
 }
 
 class Cat {
@@ -47,3 +55,50 @@ class LiveCat extends Cat {
 }
 
 var hi = new LiveCat();
+
+abstract class AbstractPair {
+  get first;
+  get second => 20;
+}
+
+class APair extends AbstractPair{
+  @override
+  get first => null;
+
+}
+
+class BPair implements AbstractPair {
+  @override
+  get first => null;
+
+  @override
+  get second => null;
+
+}
+
+class TestPoint {
+  var a, b;
+  TestPoint(x, y) {
+    this.a = x;
+    this.b = y;
+    print("TestPoint");
+  }
+}
+
+class TestPoint3D extends TestPoint {
+  var c;
+  TestPoint3D(a, b, c): super(a, b) {
+    this.c = c;
+    print("TestPoint3D");
+  }
+}
+
+/*
+class TestPoint4D extends TestPoint3D {
+  var d;
+  TestPoint4D(a, b, c, d) {
+    this.d = d;
+    super(a, b, c);
+  }
+}
+*/
