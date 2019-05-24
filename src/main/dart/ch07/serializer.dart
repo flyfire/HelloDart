@@ -59,7 +59,7 @@ List<int> serializeFields(ClassMirror cm, InstanceMirror im) {
   List<int> fields = new List<int>();
   for(ClassMirror sc in superClasses(cm)) {
     for(Mirror m in sc.declarations.values.where(isInstanceField)) {
-      fields.add(serializeObject(im.getField(m.simpleName).reflectee).id);
+//      fields.add(serializeObject(im.getField(m.simpleName).reflectee).id);
     }
   }
   return fields;
