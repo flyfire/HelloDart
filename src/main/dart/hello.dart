@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:HelloDart/HelloDart.dart' as HelloDart;
 
 main(List<String> arguments) {
+  var a;
+  print(a??"solarex");
   print('Hello world: ${HelloDart.calculate()}!');
   print('hello dart from solarex');
   print([].isEmpty);
